@@ -12,28 +12,32 @@ import lombok.Setter;
 
 @Getter
 @Setter
-//@Entity
-//@Table(name="ciudad")
+@Entity
+@Table(name="ciudad")
 public class Ciudad implements Serializable{
 	private static final long serialVersionUID = 1L;
-	//@OneToOne
+	@OneToOne
 	private Coord coord;
-	//@OneToMany
+	@OneToMany
 	private List<Weather> weather;
 	private String base;
-	//@OneToOne
+	@OneToOne
 	private Main main;
 	private Long visibility;
-	//@OneToOne
+	@OneToOne
 	private Wind wind;
-	//@OneToOne
+	@OneToOne
 	private Clouds clouds;
 	private Long dt;
-	//@OneToOne
+	@OneToOne
 	private Sys sys;
 	private Long timezone;
-	//@Id
+	@Id
 	private Long id;
 	private String name;
 	private int cod;
+	
+	public Ciudad() {
+		
+	}
 }
